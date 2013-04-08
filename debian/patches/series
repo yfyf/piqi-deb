@@ -1,0 +1,6 @@
+0001-Bump-version-number-to-0.6.3-dev.patch
+0002-Respect-DESTDIR-parameter-in-install-target.patch
+0003-Move-installing-of-piqic-make-install-to-make-ocaml-.patch
+0004-Add-Motiejus-Jak-tys-to-THANKS.patch
+0005-Add-support-for-travis-ci-service.patch
+0006-Update-README-and-convert-it-to-Markdown.patch
