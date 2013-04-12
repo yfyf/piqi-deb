@@ -16,10 +16,17 @@ override_dh_auto_configure:
 
 override_dh_auto_build:
 	$(MAKE) deps
+	$(MAKE) -f `pwd`/debian/Makefile.doc -C doc
 	dh_auto_build
 
 override_dh_auto_test:
 	(. ./setenv.sh && make -C tests)
+
+override_dh_auto_install:
+	dh_auto_install
+	install -d debian/piqi/usr/share/doc/piqi/html
+	install -T CHANGES debian/piqi/usr/share/doc/piqi/changelog
+	install -t debian/piqi/usr/share/doc/piqi/html/ doc/*.html
 
 %:
 	dh $@ 

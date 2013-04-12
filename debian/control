@@ -2,8 +2,9 @@ Source: piqi
 Section: admin
 Priority: optional
 Maintainer: Motiejus Jakštys <desired.mta@gmail.com>
-Build-Depends: debhelper (>= 8.0.0), camlp4-extra, libfindlib-ocaml-dev
-Standards-Version: 3.9.2
+Build-Depends: debhelper (>= 8.0.0), camlp4-extra, libfindlib-ocaml-dev,
+    libprotoc-dev, protobuf-compiler
+Standards-Version: 3.9.3
 Homepage: http://piqi.org/
 Vcs-Git: git://git.github.com/alavrik/piqi.git
 Vcs-Browser: https://github.com/alavrik/piqi
@@ -11,27 +12,27 @@ Vcs-Browser: https://github.com/alavrik/piqi
 Package: piqi
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: A Set of open-source tools for working with structured data
+Description: Set of open-source tools for working with structured data
  Piqi is a set of languages and open-source tools for working with structured
  data. It includes:
  .
- - A cross-language data serialization system compatible with Google Protocol
-   Buffers. It allows programs implemented in various languages to exchange
-   and persist data in a portable manner.
+  - A cross-language data serialization system compatible with Google Protocol
+    Buffers. It allows programs implemented in various languages to exchange
+    and persist data in a portable manner.
  .
- - Piq -- a human-friendly typed data representation language. It is designed
-   to be more convenient for representing, viewing and editing data than
-   JSON, XML, CSV, S-expressions and other formats.
+  - Piq -- a human-friendly typed data representation language. It is designed
+    to be more convenient for representing, viewing and editing data than
+    JSON, XML, CSV, S-expressions and other formats.
  .
- - Piqi -- a powerful data definition language. It is specially designed to
-   be used with Piq, but also works as a schema language for other data
-   formats including JSON, XML and Protocol Buffers binary format. Tools for
-   validating, pretty-printing and converting data between Piq, JSON, XML and
-   Protocol Buffers binary format.
+  - Piqi -- a powerful data definition language. It is specially designed to
+    be used with Piq, but also works as a schema language for other data
+    formats including JSON, XML and Protocol Buffers binary format. Tools for
+    validating, pretty-printing and converting data between Piq, JSON, XML and
+    Protocol Buffers binary format.
  .
- - Piqi-RPC -- an RPC-over-HTTP system for Erlang. It provides a simple way
-   to expose Erlang services via JSON, XML and Google Protocol Buffers over
-   HTTP.
+  - Piqi-RPC -- an RPC-over-HTTP system for Erlang. It provides a simple way
+    to expose Erlang services via JSON, XML and Google Protocol Buffers over
+    HTTP.
  .
  As a data serialization system, Piqi implements native support for OCaml and
  Erlang. Connectivity with other programming languages is provided via Google
