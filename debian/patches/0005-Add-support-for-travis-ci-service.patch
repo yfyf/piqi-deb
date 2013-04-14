@@ -1,7 +1,7 @@
 From cafe8a20c56b8a6e49c675ed4088da4ebf905df2 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Motiejus=20Jak=C5=A1tys?= <motiejus.jakstys@spilgames.com>
 Date: Sat, 6 Apr 2013 17:53:06 +0300
-Subject: [PATCH 5/6] Add support for travis-ci service
+Subject: [PATCH 5/9] Add support for travis-ci service
 
 This allows running tests on shared continuous integration testing
 service travis-ci.org. Currently it does:

@@ -1,7 +1,7 @@
-From 1f890c3a2f41c4fbe328c5ff8f2ac8277f12a969 Mon Sep 17 00:00:00 2001
+From 33cdd43bb262167482d47f5602559bb5f9fba3a2 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Motiejus=20Jak=C5=A1tys?= <motiejus.jakstys@spilgames.com>
 Date: Fri, 12 Apr 2013 11:23:52 +0200
-Subject: [PATCH] Make `tools.md` better suited for `pandoc -t man`
+Subject: [PATCH 8/9] Make `tools.md` better suited for `pandoc -t man`
 
 ---
  doc/tools.md |   27 ++++++++++++++++++---------

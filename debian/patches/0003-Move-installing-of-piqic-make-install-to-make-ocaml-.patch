@@ -1,7 +1,7 @@
 From 54cebbd0de80a271a9f9f49e0affc905defe34f6 Mon Sep 17 00:00:00 2001
 From: Anton Lavrik <alavrik@piqi.org>
 Date: Sun, 7 Apr 2013 02:07:58 -0500
-Subject: [PATCH 3/6] Move installing of piqic "make install" to "make
+Subject: [PATCH 3/9] Move installing of piqic "make install" to "make
  ocaml-install"
 
 ... because "piqic" is now ocaml-specific (and soon to be renamed piqic-ocaml)

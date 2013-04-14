@@ -1,7 +1,7 @@
 From ddee267a17b9680c8a978511e95a8ffb92b43b3d Mon Sep 17 00:00:00 2001
 From: Anton Lavrik <alavrik@piqi.org>
 Date: Mon, 8 Apr 2013 00:59:47 -0500
-Subject: [PATCH 6/6] Update README and convert it to Markdown
+Subject: [PATCH 6/9] Update README and convert it to Markdown
 
 ---
  README    |  111 -------------------------------------------------------------

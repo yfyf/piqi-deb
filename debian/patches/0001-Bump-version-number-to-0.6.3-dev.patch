@@ -1,7 +1,7 @@
 From 698f3064387c0323f7d0d2c3faa65c9d851c53a0 Mon Sep 17 00:00:00 2001
 From: Anton Lavrik <alavrik@piqi.org>
 Date: Wed, 3 Apr 2013 01:38:11 -0500
-Subject: [PATCH 1/6] Bump version number to 0.6.3-dev
+Subject: [PATCH 1/9] Bump version number to 0.6.3-dev
 
 ---
  VERSION |    2 +-
