@@ -7,3 +7,4 @@
 0007-Fix-test.cpp-compile-error.patch
 0008-Make-tools.md-better-suited-for-pandoc-t-man.patch
 0009-Add-doc-index.md-documentation-frontpage-TOC.patch
+1000-html_docs.patch

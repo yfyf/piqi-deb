@@ -1,3 +1,9 @@
+piqi (0.6.3-4) UNRELEASED; urgency=low
+
+  * Fix internal documentation
+
+ -- Motiejus Jakštys <desired.mta@gmail.com>  Sun, 14 Apr 2013 16:06:09 +0300
+
 piqi (0.6.3-3) unstable; urgency=low
 
   * Fix build dependencies: add ocaml-findlib and pandoc

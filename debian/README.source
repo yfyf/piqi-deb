@@ -1,0 +1,36 @@
+How to prepare the 'debian' source from upstream
+------------------------------------------------
+
+The most interesting patches are documentation patches. Here is the script that
+I use to convert doc/*.md to get the cross references right:
+
+    #!/bin/sh -xe
+
+    # Change known out-of-package documentation to proper links
+    sed -i 's|](\(/doc/erlang\)| (external)](http://piqi.org\1|g' *.md
+    sed -i 's|](\(/doc/piqi-rpc\)| (external)](http://piqi.org\1|g' *.md
+    sed -i 's|](\(/doc/faq\)| (external)](http://piqi.org\1|g' *.md
+    sed -i 's|](\(/examples\)| (external)](http://piqi.org\1|g' *.md
+    sed -i 's|](\(/self-definition\)| (external)](http://piqi.org\1|g' *.md
+    sed -i 's|](\(/rationale\)| (external)](http://piqi.org\1|g' *.md
+
+    # Local stuff 2: /doc(/?)*#stuff) points to *.html#stuff
+    sed -i 's|(/doc/\([^/]*\)/\?#\([^)]*\))|(\1.html#\2)|g' *.md
+
+    # Local stuff: /doc/*/) points to *.html
+    sed -i 's|(/doc/\([^/]*\)/\?)|(\1.html)|g' *.md
+
+    # Ad-hoc fixes
+    sed -i 's|#environmentvariables|#environment-variables|g' tools.md
+
+Verify you got the links right:
+
+    $ cd doc
+    $ python3 -m http.server
+    $ wget --spider -rl2 http://localhost:8000
+
+Return code of the last command must be `0`.
+
+Once everything is ready, prepare the patch:
+
+    $ git diff > debian/patches/html_docs.patch

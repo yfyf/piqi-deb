@@ -1,7 +1,7 @@
 SRCS=$(wildcard *.md)
 HTML=$(patsubst %.md,%.html,$(SRCS))
 
-.PHONY: all man html
+.PHONY: all clean man html
 
 all: man html
 
@@ -17,3 +17,6 @@ CHANGES.html: ../CHANGES
 
 piqi.1: tools.md
 	pandoc -s -t man $< -o $@
+
+clean:
+	rm -f $(HTML) piqi.1
