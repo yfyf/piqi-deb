@@ -16,7 +16,7 @@ override_dh_auto_configure:
 
 override_dh_auto_build:
 	$(MAKE) deps
-	$(MAKE) -f `pwd`/debian/Makefile.doc -C doc
+	$(MAKE) -C doc
 	dh_auto_build
 
 override_dh_auto_test:

@@ -1,4 +1,10 @@
-piqi (0.6.3-4) UNRELEASED; urgency=low
+piqi (0.6.4) unstable; urgency=low
+
+  * Bump upstream version
+
+ -- Motiejus Jakštys <desired.mta@gmail.com>  Sun, 21 Apr 2013 11:35:41 +0300
+
+piqi (0.6.3-4) unstable; urgency=low
 
   * Fix internal documentation
 
