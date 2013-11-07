@@ -1,3 +1,9 @@
+piqi (0.6.5-1) unstable; urgency=low
+
+  * Bump upstream version
+
+ -- Motiejus Jakštys <desired.mta@gmail.com>  Thu, 07 Nov 2013 08:23:34 +0100
+
 piqi (0.6.4) unstable; urgency=low
 
   * Bump upstream version
