@@ -1,0 +1,29 @@
+#!/bin/sh
+#
+# download the upstream piqi tarball based on the release version given as the
+# first argument
+#
+# usage: ./download-upstream-tarball <version>
+#
+#
+# NOTE: the downloaded tarball has the directory named as
+# alavrik-piqi-<shortcommit>; for Debian packaging to work, we need to rename
+# the directory to "piqi-<version>" and repack it
+
+VERSION="$1"
+test -z "$VERSION" && echo "usage: $0 <version>" 1>&2 && exit 1
+
+set -e
+TMP=tmp.tar.gz
+
+curl -L -o $TMP "https://api.github.com/repos/alavrik/piqi/tarball/v$VERSION"
+
+DIR="piqi-$VERSION"
+rm -rf $DIR && mkdir $DIR
+tar -xzf tmp.tar.gz -C $DIR --strip-components=1
+
+tar -czf $DIR.tar.gz $DIR
+rm -rf tmp.tar.gz $DIR
+
+
+# ex: et sw=4 ts=4
