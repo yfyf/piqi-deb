@@ -1,5 +1,6 @@
 # upstream version
-VERSION=0.6.5
+VERSION = 0.6.5
+COMMIT = d4e0d42922ae2069e025c73564d5a74bf7b78e11
 
 
 all: download deb
@@ -9,7 +10,7 @@ download: piqi-$(VERSION).tar.gz
 
 
 piqi-$(VERSION).tar.gz:
-	./download-upstream-tarball $(VERSION)
+	./download-upstream-tarball $(VERSION) $(COMMIT)
 
 
 deb: download
